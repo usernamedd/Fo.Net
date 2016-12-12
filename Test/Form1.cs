@@ -15,5 +15,13 @@ namespace Test
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string xslpath = "..\\..\\FO-xsl\\XSLTFile1.xslt";
+            string xmlpath = "..\\..\\FO-xsl\\XMLFile1.xml";
+            PDFBuilder pdfBuilder = new PDFBuilder();
+            pdfBuilder.GenertePDF(new List<string> { xmlpath }, xslpath);
+        }
     }
 }
